@@ -16,17 +16,17 @@ function Homepage() {
         setTotalPosts(filteredPosts.length);
     }
 
-    useEffect(() => { 
-        fetch("https://jsonplaceholder.typicode.com/posts/")
-        .then((response) => response.json())
-        .then((json) => setExternalPosts(json));
-    }, []);
+    // useEffect(() => { 
+    //     fetch("https://jsonplaceholder.typicode.com/posts/")
+    //     .then((response) => response.json())
+    //     .then((json) => setExternalPosts(json));
+    // }, []);
 
-    useEffect(() => {
-        console.log("ada post baru");
-    }, [])
+    // useEffect(() => {
+    //     console.log("ada post baru");
+    // }, [])
 
-    // Note: useEffect bisa digunakan untuk mentau sebuah state yang ditampung dalam array. ketika state yang dipantau berubah maka ia akan menjalankan baris kode atasnya (render)
+    // // Note: useEffect bisa digunakan untuk mentau sebuah state yang ditampung dalam array. ketika state yang dipantau berubah maka ia akan menjalankan baris kode atasnya (render)
 
     return (
         <>
@@ -39,11 +39,11 @@ function Homepage() {
             )
             )
             }
-            <hr />
+            {/* <hr />
             <h2>External Posts</h2>
             {externalPosts.map((item, index) => (
                 <div key={index}>-{item.title}</div>
-            ))}
+            ))} */}
         </>
     );
 }
